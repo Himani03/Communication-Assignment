@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Communication Application</title>
+  <script type="text/javascript" src="./js/login.js"></script>
+  <script type="text/javascript" src="./js/loggedUserRedirect.js"></script>
+  <link rel="stylesheet" href="./css/login-process.css" />
+</head>
+
+<body onload="loggedUserRedirect()">
+  <header style="margin-left: -10%;">
+    <h1>Login</h1>
+  </header>
+  <section>
+    <!-- Login Section -->
+    <form action="./login-success.html" method="get" onsubmit="return loginHandler()" novalidate>
+      <div class="panel">
+        <table class="panel">
+          <tr>
+            <td><label for="email">Email </label></td>
+            <td><input type="email" name="email" id="email" placeholder="Enter your email" /></td>
+          </tr>
+          <tr>
+            <td><label for="password">Password </label></td>
+            <td><input type="password" name="password" id="password" placeholder="Enter your password" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button type="submit">Login</button></td>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </section>
+</body>
+
+</html>

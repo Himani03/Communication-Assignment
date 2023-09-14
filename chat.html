@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group Chat | Communication Application</title>
+    <script type="text/javascript" src="./js/loginValidation.js"></script>
+    <script type="text/javascript" src="./js/logoutValidation.js"></script>
+    <script type="text/javascript" src="./js/chat.js"></script>
+    <link rel="stylesheet" href="./css/navigation-menu.css" />
+    <link rel="stylesheet" href="./css/chat-page-style.css" />
+  </head>
+  <body onload="loginValidationHandler(); chatPageInitializationHandler();">
+    <!-- navigation -->
+    <nav>
+      <a href="./chat.html">Group Chat</a>
+      <a href="./users-list.html">Manage Users</a>
+      <a href="./documents-list.html">Manage documents</a>
+      <button onClick="logoutValidationHandler()">Logout</button>
+    </nav>
+    <div class="chat-heading">
+      <h1>Group Chat</h1>
+    </div>
+    <div class="chat-message" id="chat">
+    </div>
+    <div id="groupChatScreen" class="add-chat">
+      <!--User name-->
+      <p id="userName"></p>
+      <form onsubmit="addNewChat()">
+        <input type="text" id="chatMessage" />
+        <input type="submit" value="Send" />
+        <input type="reset" value="Refresh" />
+      </form>
+    </div>
+  </body>
+</html>

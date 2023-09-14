@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage | Communication Application</title>
+    <script type="text/javascript" src="./js/activeUser.js"></script>
+    <script type="text/javascript" src="./js/loginValidation.js"></script>
+    <script type="text/javascript" src="./js/logoutValidation.js"></script>
+    <link rel="stylesheet" href="./css/login-process.css" />
+    <link rel="stylesheet" href="./css/navigation-menu.css" />
+  </head>
+  <body onLoad="loginValidationHandler(); activeUserInfoHandler();">
+    <!-- Menu Navigation -->
+    <nav>
+      <a href="./chat.html">Group Chat</a>
+      <a href="./users-list.html">Manage Users</a>
+      <a href="./documents-list.html">Manage documents</a>
+      <button style="background-color:#bfbfbf;" onClick="logoutValidationHandler()">Logout</button>
+    </nav>
+    <header>
+      <h1>Login Successful</h1>
+    </header>
+    <!-- Welcome Section -->
+    <section>
+      <p>
+        <b>Welcome <span id="userName"></span>!</b>
+      </p>
+    </section>
+  </body>
+</html>

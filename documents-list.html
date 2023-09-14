@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document List | Communication Application</title>
+    <script type="text/javascript" src="./js/loginValidation.js"></script>
+    <script type="text/javascript" src="./js/logoutValidation.js"></script>
+    <script type="text/javascript" src="./js/documentList.js"></script>
+    <link rel="stylesheet" href="./css/navigation-menu.css" />
+    <link rel="stylesheet" href="./css/document.modal.css" />
+    <link rel="stylesheet" href="./css/table-style.css" />
+  </head>
+  <body onload="loginValidationHandler(); documentListIntializationHandler();">
+    <!-- navigation -->
+    <nav>
+      <a href="./chat.html">Group Chat</a>
+      <a href="./users-list.html">Manage Users</a>
+      <a href="./documents-list.html">Manage documents</a>
+      <button onClick="logoutValidationHandler()">Logout</button>
+    </nav>
+    <!--My Uploads-->
+    <div id="myUploads">
+      <table class="table-wrapper">
+        <caption>
+          My Uploads
+        </caption>
+        <thead>
+          <tr>
+            <th>Label</th>
+            <th>File Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="documentUploadList"></tbody>
+      </table>
+    </div>
+    <button onClick="documentModalShowHandler('modal-upload')">
+      + Add Upload
+    </button>
+
+    <!--Add Upload modal-->
+    <section id="modal-upload" class="modal">
+      <div class="heading-wrap"><h2>Upload</h2></div>
+      <div>
+        <form onSubmit="documentUploadHandler()">
+          <div>
+            <label for="fileName">File Description: </label>
+            <input
+              type="text"
+              name="fileName"
+              id="fileName"
+              placeholder="Enter a valid file name"
+            />
+          </div>
+          <div>
+            <label for="fileUpload">File Upload: </label>
+            <input type="file" name="fileUpload" id="fileUpload" />
+          </div>
+          <button type="Submit">Upload</button>
+          <button
+            type="button"
+            onclick="documentModalCancellationHandler('modal-upload')"
+          >
+            Cancel
+          </button>
+        </form>
+      </div>
+    </section>
+    <!--Edit User modal-->
+    <section id="modal-edit" class="modal">
+      <div class="heading-wrap"><h2>Edit Document</h2></div>
+      <div>
+        <form onSubmit="editDocumentUploadHandler()">
+          <div>
+            <label for="fileName">File Description: </label>
+            <input type="text" name="fileName" id="fileNameEdit" />
+          </div>
+          <button type="submit">Save</button>
+          <button type="button" onclick="editDocumentModalHideHandler()">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </section>
+    <!--delete user modal-->
+    <section id="modal-delete" class="modal">
+      <div class="heading-wrap"><h2>Delete Document</h2></div>
+      <div class="confirmation-wrap">
+        <h3>Are you sure?</h3>
+        <button type="button" onclick="deleteDocumentHandler()">yes</button>
+        <button type="button" onclick="deleteDocumentModalHideHandler()">
+          Cancel
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

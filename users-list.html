@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users | Communication Application</title>
+    <script type="text/javascript" src="./js/userList.js"></script>
+    <script type="text/javascript" src="./js/editUser.js"></script>
+    <script type="text/javascript" src="./js/deleteUser.js"></script>
+    <script type="text/javascript" src="./js/loginValidation.js"></script>
+    <script type="text/javascript" src="./js/logoutValidation.js"></script>
+    <!--Css-->
+    <link rel="stylesheet" href="./css/navigation-menu.css" />
+    <link rel="stylesheet" href="./css/users-list.css" />
+    <link rel="stylesheet" href="./css/table-style.css" />
+  </head>
+  <!--update userList function here-->
+  <body onload="loginValidationHandler(); usersList();">
+    <!--Main Navigation!-->
+    <nav>
+      <a href="./chat.html">Group Chat</a>
+      <a href="./users-list.html">Manage Users</a>
+      <a href="./documents-list.html">Manage documents</a>
+      <button onClick="logoutValidationHandler()">Logout</button>
+    </nav>
+    <section>
+      <!--Table of Users-->
+      <table class="table-wrapper">
+        <caption>
+          Users
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>User Email ID</th>
+            <th>Manage User</th>
+          </tr>
+        </thead>
+        <tbody id="usersList"></tbody>
+      </table>
+    </section>
+    <!--Modal for deleting the user-->
+    <section id="modal">
+      <div class="wrapper">
+        <header>
+          <h2 class="heading">
+            Confirm User Deletion
+          </h2>
+        </header>
+        <section class="buttons">
+          <button type="button" onclick="deleteUserHandler()">Ok</button>
+          <button type="button" onclick="deleteCancellationHandler()">
+            Cancel
+          </button>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
