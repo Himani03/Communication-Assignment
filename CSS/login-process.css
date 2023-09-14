@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+}
+
+section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+section button {
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 15px;
+    height: 40px;
+    width: 150px;
+}
+
+input[type="Text"],
+input[type="email"],
+input[type="password"] {
+    width: auto;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 15px;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.panel{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 19%;
+}

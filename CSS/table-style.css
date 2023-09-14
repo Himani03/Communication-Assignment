@@ -1,0 +1,27 @@
+table.table-wrapper {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.table-wrapper caption {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-wrapper th {
+    background-color: #bfbfbf;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.table-wrapper tr:nth-child(even) {
+    background-color: beige;
+}

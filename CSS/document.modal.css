@@ -1,0 +1,48 @@
+#modal-upload {
+    display: none;
+}
+
+#modal-edit {
+    display: none;
+}
+
+#modal-delete {
+    display: none;
+}
+
+section.modal {
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 1;
+}
+
+div.heading-wrap {
+    margin: 5px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+form,
+form>div {
+    padding: 10px;
+}
+
+form>button {
+    padding: 15px;
+    margin: 5px 10px;
+}
+
+div.confirmation-wrap {
+    text-align: center;
+}
+
+div.confirmation-wrap>button {
+    padding: 10px;
+    margin: 10px;
+}

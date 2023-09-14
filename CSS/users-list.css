@@ -1,0 +1,27 @@
+div.wrapper {
+    border: 1px solid black;
+    background-color: hsl(0, 0%, 100%);
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+h2.heading {
+    text-align: center;
+}
+
+section.buttons {
+    text-align: center;
+    padding: 10px;
+}
+
+section.buttons button {
+    background-color: #bfbfbf;
+    height: 30px;
+    width: 60px;
+}
+
+section#modal {
+    display: none;
+}
