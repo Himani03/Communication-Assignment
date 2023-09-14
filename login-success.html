@@ -24,9 +24,12 @@
     </header>
     <!-- Welcome Section -->
     <section>
-      <p>
-        <b>Welcome <span id="userName"></span>!</b>
+      <p id="WelcomeText">
+        <b>Welcome !</b>
       </p>
     </section>
+    <script>
+      document.getElementById("WelcomeText").innerHTML="Welcome ! "+ JSON.parse(localStorage.getItem("activeUser")).email;
+    </script>
   </body>
 </html>
