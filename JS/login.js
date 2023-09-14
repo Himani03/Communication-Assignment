@@ -1,27 +1,23 @@
 let loginHandler = () => {
-  let count;
-  let valid = 0;
-  let id;
-  let activeUserString;
   let loginEmail = document.getElementById("email").value;
   let loginPass = document.getElementById("password").value;
   let isValidEmail = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+  let existingUsers, userExist,id;
   //  validation
   if (isValidEmail.test(loginEmail) === false || loginEmail === "" || loginEmail === null) {
     alert("Enter a Valid Email");
     return false;
   }
   // Validating if the value exists in the local storage
-  //let existingUsers = JSON.parse(localStorage.getItem("usersList"));
-  let existingUsers = localStorage.getItem("usersList");
-  alert(existingUsers["id"]);
-  alert(type(existingUsers));
-  //email validation
+  if (localStorage.getItem("usersList") !== null) {
+    existingUsers = JSON.parse(localStorage.getItem("usersList"));
+    userExist = false;
+  }
+  // validation
+
   for (count = 0; count < existingUsers.length; count++) {
     if (existingUsers[count].email === loginEmail) {
-      valid = valid + 1;
       id = count;
-      console.log(id);
       break;
     }
     if (count === existingUsers.length - 1) {
@@ -37,7 +33,7 @@ let loginHandler = () => {
     localStorage.setItem("activeUser", activeUserString);
     return true;
   } else {
-    alert("Password do not match");
+    alert("Password do not match the existing data, please revalidate");
     return false;
   }
 };
