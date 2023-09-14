@@ -60,6 +60,7 @@ let editUserStorageHandler = (editId) => {
       }
     }
     activeUser = JSON.stringify(activeUser);
+    alert(activeUser);
     localStorage.setItem("activeUser", activeUser);
     document.location.replace("./users-list.html");
     return false;
